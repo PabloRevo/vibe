@@ -1,0 +1,6 @@
+aiogram==2.21
+python-dotenv~=0.20.0
+peewee~=3.15.1
+django~=4.0.6
+pillow~=9.1.1
+psycopg2-binary~=2.9.3

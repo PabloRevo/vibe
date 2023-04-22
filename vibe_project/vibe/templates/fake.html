@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="ru" dir="ltr">
+<head>
+<title>Добавить фейкового пользователя</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/static/admin/css/nav_sidebar.css">
+  <script src="/static/admin/js/nav_sidebar.js" defer></script>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/login.css">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" login"
+  data-admin-utc-offset="0">
+<!-- Container -->
+<div id="container">
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+            <h1 id="site-name"><a style="padding: 10px 15px; margin-right: 70px; font-size: 13px; border: None; border-radius: 4px; color: #fff; background: #79aec8; cursor: pointer;" href="javascript:history.go(-1)"">Назад</a><a href="/admin/">Фейковые пользователи</a></h1>
+        </div>
+    </div>
+    <!-- END Header -->
+    <div class="main" id="main">
+      <div class="content">
+        <!-- Content -->
+        <div id="content" class="colM">
+<div id="content-main">
+<form method="post" id="login-form">
+    {% csrf_token %}
+    <div class="form-row">
+        <label class="required">{{ form.city.label }}</label>
+        {{ form.city }}
+    </div>
+    <div class="form-row">
+        <label class="required">{{ form.school.label }}</label>
+        {{ form.school }}
+    </div>
+    <div class="form-row">
+        <label class="required">{{ form.school_class.label }}</label>
+        {{ form.school_class }}
+    </div>
+    <div class="form-row">
+        <label class="required">{{ form.names.label }}</label>
+        {{ form.names }}
+    </div>
+  <div class="submit-row">
+    <input type="submit" value="Добавить" style="margin-right: 20px;">
+  </div>
+</form>
+</div>
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+</body>
+</html>
